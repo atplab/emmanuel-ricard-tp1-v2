@@ -1,0 +1,486 @@
+[gd_scene load_steps=34 format=3 uid="uid://big0x65e1yu0i"]
+
+[ext_resource type="Script" uid="uid://cuxrksc0kou30" path="res://tp_1_test.gd" id="1_3v75x"]
+[ext_resource type="Texture2D" uid="uid://dx7indmqfudrf" path="res://img/jumper/Background/bg_layer1.png" id="2_h5nue"]
+[ext_resource type="Texture2D" uid="uid://dma1kdtodhvfo" path="res://img/jumper/Environment/ground_grass.png" id="2_lyv3j"]
+[ext_resource type="Texture2D" uid="uid://cmheathvl5201" path="res://img/jumper/Environment/ground_grass_small.png" id="3_540sd"]
+[ext_resource type="Texture2D" uid="uid://dnediu36hi6so" path="res://img/plateformer/Tiles/platformPack_tile001.png" id="4_ggotr"]
+[ext_resource type="Texture2D" uid="uid://pdmig8tsomo" path="res://img/plateformer/Characters/platformChar_idle.png" id="5_h5nue"]
+[ext_resource type="Texture2D" uid="uid://ce4fc6ykv4eyw" path="res://img/jumper/Environment/ground_sand_small.png" id="6_mj2m5"]
+[ext_resource type="Texture2D" uid="uid://dqq6kgnagjs03" path="res://img/jumper/Environment/ground_sand.png" id="7_vmyjr"]
+[ext_resource type="Texture2D" uid="uid://jogb3wma488a" path="res://img/jumper/Environment/ground_cake.png" id="8_dxljs"]
+[ext_resource type="Texture2D" uid="uid://tjiee51e2kee" path="res://img/plateformer/Characters/platformChar_jump.png" id="9_4b8pp"]
+[ext_resource type="Texture2D" uid="uid://db18uge231iah" path="res://img/jumper/Environment/ground_cake_small.png" id="9_hy7iv"]
+[ext_resource type="Texture2D" uid="uid://d3msym0onvvsv" path="res://img/jumper/Items/spring.png" id="10_4rk86"]
+[ext_resource type="Texture2D" uid="uid://bdsbe1o0o7yx6" path="res://img/jumper/Items/spring_in.png" id="11_gpted"]
+[ext_resource type="Texture2D" uid="uid://co0figkt8kitq" path="res://img/jumper/Items/spring_out.png" id="12_kogf3"]
+[ext_resource type="Texture2D" uid="uid://c1yemxvnhkjkf" path="res://img/jumper/Enemies/cloud.png" id="14_tfmpa"]
+[ext_resource type="Texture2D" uid="uid://dqa8rs25y0rnj" path="res://img/jumper/Enemies/flyMan_stand.png" id="15_kogf3"]
+[ext_resource type="AudioStream" uid="uid://hhc2gs03smsh" path="res://audio/upbeat-background-loop-casual-video-game-music-249200.mp3" id="15_mj2m5"]
+[ext_resource type="Texture2D" uid="uid://7msag1wrk0m1" path="res://img/jumper/Enemies/spikeMan_stand.png" id="15_ssxa7"]
+[ext_resource type="Texture2D" uid="uid://c17njfagmmqyf" path="res://img/jumper/Enemies/flyMan_fly.png" id="16_v4jhf"]
+[ext_resource type="Script" uid="uid://tccu6jqnl351" path="res://audio_stream_player_2d.gd" id="16_vmyjr"]
+[ext_resource type="Texture2D" uid="uid://6yqv1jo6owxf" path="res://img/jumper/Enemies/flyMan_jump.png" id="17_pb6st"]
+[ext_resource type="Texture2D" uid="uid://c8qctik1cbxrw" path="res://img/jumper/Items/bronze_1.png" id="20_v4jhf"]
+[ext_resource type="Texture2D" uid="uid://bywidsi2oq3pu" path="res://img/jumper/Items/bronze_2.png" id="21_pb6st"]
+[ext_resource type="Texture2D" uid="uid://d2024kddvw3bf" path="res://img/jumper/Items/bronze_3.png" id="22_b2cp2"]
+[ext_resource type="Texture2D" uid="uid://co2ecvfdlx3tv" path="res://img/jumper/Items/silver_1.png" id="23_4hic7"]
+[ext_resource type="Texture2D" uid="uid://cqjlxyii1nfvq" path="res://img/jumper/Items/silver_2.png" id="24_gqg8h"]
+[ext_resource type="Texture2D" uid="uid://6n1r6kd0s40r" path="res://img/jumper/Items/silver_3.png" id="25_msqmt"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mj2m5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_h5nue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4b8pp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nxn33"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_4rk86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_gpted")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_kogf3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uexbm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_h5nue")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b2cp2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_kogf3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_v4jhf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_pb6st")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_v4jhf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_61wga"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_4hic7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_gqg8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_msqmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_gqg8h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ielx3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_v4jhf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_pb6st")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_b2cp2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_pb6st")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="TP1 test" type="Node2D"]
+script = ExtResource("1_3v75x")
+
+[node name="BgLayer1" type="Sprite2D" parent="."]
+position = Vector2(578, 328)
+scale = Vector2(0.584961, 0.339355)
+texture = ExtResource("2_h5nue")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 3.0
+offset_top = 5.0
+offset_right = 195.0
+offset_bottom = 78.0
+text = "Bouton"
+
+[node name="GroundGrass" type="Sprite2D" parent="."]
+position = Vector2(229, 586)
+scale = Vector2(0.186211, 0.186211)
+texture = ExtResource("2_lyv3j")
+
+[node name="GroundGrassSmall" type="Sprite2D" parent="GroundGrass"]
+position = Vector2(1310.34, -139.627)
+scale = Vector2(1.23375, 1.23375)
+texture = ExtResource("3_540sd")
+
+[node name="GroundGrass2" type="Sprite2D" parent="GroundGrass"]
+position = Vector2(520.916, -187.959)
+scale = Vector2(1.29687, 1.29687)
+texture = ExtResource("2_lyv3j")
+
+[node name="PlatformPackTile001" type="Sprite2D" parent="."]
+position = Vector2(17, 630)
+scale = Vector2(0.510451, 0.510451)
+texture = ExtResource("4_ggotr")
+
+[node name="PlatformPackTile001" type="Sprite2D" parent="PlatformPackTile001"]
+position = Vector2(64, 0)
+texture = ExtResource("4_ggotr")
+
+[node name="PlatformPackTile002" type="Sprite2D" parent="PlatformPackTile001"]
+position = Vector2(128, 0)
+texture = ExtResource("4_ggotr")
+
+[node name="PlatformPackTile001" type="Sprite2D" parent="PlatformPackTile001/PlatformPackTile002"]
+position = Vector2(64, 0)
+texture = ExtResource("4_ggotr")
+
+[node name="PlatformPackTile003" type="Sprite2D" parent="PlatformPackTile001"]
+position = Vector2(256, 0)
+texture = ExtResource("4_ggotr")
+
+[node name="PlatformPackTile001" type="Sprite2D" parent="PlatformPackTile001/PlatformPackTile003"]
+position = Vector2(64, 0)
+texture = ExtResource("4_ggotr")
+
+[node name="PlatformPackTile002" type="Sprite2D" parent="PlatformPackTile001/PlatformPackTile003"]
+position = Vector2(128, 0)
+texture = ExtResource("4_ggotr")
+
+[node name="PlatformPackTile004" type="Sprite2D" parent="PlatformPackTile001"]
+position = Vector2(987.363, 1.95909)
+texture = ExtResource("4_ggotr")
+
+[node name="PlatformPackTile001" type="Sprite2D" parent="PlatformPackTile001/PlatformPackTile004"]
+position = Vector2(64, 0)
+texture = ExtResource("4_ggotr")
+
+[node name="PlatformPackTile002" type="Sprite2D" parent="PlatformPackTile001/PlatformPackTile004"]
+position = Vector2(128, 0)
+texture = ExtResource("4_ggotr")
+
+[node name="PlatformPackTile001" type="Sprite2D" parent="PlatformPackTile001/PlatformPackTile004/PlatformPackTile002"]
+position = Vector2(64, 0)
+texture = ExtResource("4_ggotr")
+
+[node name="PlatformPackTile003" type="Sprite2D" parent="PlatformPackTile001/PlatformPackTile004"]
+position = Vector2(256, 0)
+texture = ExtResource("4_ggotr")
+
+[node name="PlatformPackTile001" type="Sprite2D" parent="PlatformPackTile001/PlatformPackTile004/PlatformPackTile003"]
+position = Vector2(64, 0)
+texture = ExtResource("4_ggotr")
+
+[node name="PlatformPackTile002" type="Sprite2D" parent="PlatformPackTile001/PlatformPackTile004/PlatformPackTile003"]
+position = Vector2(128, 0)
+texture = ExtResource("4_ggotr")
+
+[node name="PlatformPackTile001" type="Sprite2D" parent="PlatformPackTile001/PlatformPackTile004/PlatformPackTile003/PlatformPackTile002"]
+position = Vector2(64, 0)
+texture = ExtResource("4_ggotr")
+
+[node name="GroundGrass2" type="Sprite2D" parent="."]
+position = Vector2(924.277, 573)
+scale = Vector2(0.361702, 0.361702)
+texture = ExtResource("2_lyv3j")
+
+[node name="GroundGrassSmall" type="Sprite2D" parent="GroundGrass2"]
+position = Vector2(-387.825, 55.2942)
+scale = Vector2(0.248824, 0.248824)
+texture = ExtResource("3_540sd")
+
+[node name="GroundGrassSmall2" type="Sprite2D" parent="GroundGrass2"]
+position = Vector2(-285.531, 8.29419)
+scale = Vector2(0.248824, 0.248824)
+texture = ExtResource("3_540sd")
+
+[node name="GroundGrass3" type="Sprite2D" parent="GroundGrass2"]
+position = Vector2(389.058, -80.1765)
+scale = Vector2(0.764707, 0.764707)
+texture = ExtResource("2_lyv3j")
+
+[node name="GroundGrassSmall3" type="Sprite2D" parent="GroundGrass2"]
+position = Vector2(112.587, -190.765)
+scale = Vector2(0.221177, 0.221177)
+texture = ExtResource("3_540sd")
+
+[node name="GroundGrassSmall4" type="Sprite2D" parent="GroundGrass2"]
+position = Vector2(13.0576, -251.588)
+scale = Vector2(0.304118, 0.304118)
+texture = ExtResource("3_540sd")
+
+[node name="GroundGrassSmall4" type="Sprite2D" parent="GroundGrass2/GroundGrassSmall4"]
+position = Vector2(-397.6, -101.375)
+scale = Vector2(1.30023, 1.30023)
+texture = ExtResource("3_540sd")
+
+[node name="GroundGrass" type="Sprite2D" parent="GroundGrass2/GroundGrassSmall4"]
+position = Vector2(-1081.82, -218.182)
+scale = Vector2(1.95068, 1.95068)
+texture = ExtResource("2_lyv3j")
+
+[node name="GroundSandSmall2" type="Sprite2D" parent="GroundGrass2/GroundGrassSmall4/GroundGrass"]
+position = Vector2(1402.77, -237.679)
+scale = Vector2(0.792261, 0.792261)
+texture = ExtResource("6_mj2m5")
+
+[node name="GroundSandSmall2" type="Sprite2D" parent="GroundGrass2/GroundGrassSmall4/GroundGrass/GroundSandSmall2"]
+position = Vector2(170.588, -194.118)
+scale = Vector2(1.19326, 1.19326)
+texture = ExtResource("6_mj2m5")
+
+[node name="GroundSandSmall" type="Sprite2D" parent="GroundGrass2/GroundGrassSmall4/GroundGrass/GroundSandSmall2"]
+position = Vector2(94.1173, -94.1179)
+scale = Vector2(1.09236, 1.09236)
+texture = ExtResource("6_mj2m5")
+
+[node name="GroundGrass" type="Sprite2D" parent="GroundGrass2/GroundGrassSmall4/GroundGrass"]
+position = Vector2(-685.075, -116.509)
+scale = Vector2(0.975342, 0.975342)
+texture = ExtResource("2_lyv3j")
+
+[node name="GroundSandSmall" type="Sprite2D" parent="GroundGrass2/GroundGrassSmall4/GroundGrass"]
+position = Vector2(1090.53, -480.019)
+scale = Vector2(0.815566, 0.815566)
+texture = ExtResource("6_mj2m5")
+
+[node name="GroundSandSmall" type="Sprite2D" parent="GroundGrass2/GroundGrassSmall4/GroundGrass/GroundSandSmall"]
+position = Vector2(-371.429, -228.572)
+scale = Vector2(0.815566, 0.815566)
+texture = ExtResource("6_mj2m5")
+
+[node name="GroundSandSmall" type="Sprite2D" parent="GroundGrass2/GroundGrassSmall4/GroundGrass/GroundSandSmall/GroundSandSmall"]
+position = Vector2(-413.385, -273.254)
+scale = Vector2(0.815566, 0.815566)
+texture = ExtResource("6_mj2m5")
+
+[node name="GroundSand" type="Sprite2D" parent="GroundGrass2/GroundGrassSmall4/GroundGrass"]
+position = Vector2(1388.79, -153.793)
+scale = Vector2(1.07486, 1.07486)
+texture = ExtResource("7_vmyjr")
+
+[node name="jump" type="AnimatedSprite2D" parent="."]
+position = Vector2(743, 587)
+scale = Vector2(0.48352, 0.48352)
+sprite_frames = SubResource("SpriteFrames_mj2m5")
+frame = 1
+frame_progress = 0.62212
+
+[node name="spring" type="AnimatedSprite2D" parent="."]
+position = Vector2(1036, 521)
+scale = Vector2(0.189106, 0.189106)
+sprite_frames = SubResource("SpriteFrames_nxn33")
+frame = 2
+frame_progress = 0.443068
+
+[node name="spring" type="AnimatedSprite2D" parent="spring"]
+position = Vector2(-5192.87, -856.664)
+scale = Vector2(1.09345, 1.09345)
+sprite_frames = SubResource("SpriteFrames_nxn33")
+frame = 2
+frame_progress = 0.443068
+
+[node name="spring" type="AnimatedSprite2D" parent="spring/spring"]
+position = Vector2(957.554, -502.958)
+scale = Vector2(1.09345, 1.09345)
+sprite_frames = SubResource("SpriteFrames_nxn33")
+frame = 2
+frame_progress = 0.443068
+
+[node name="GroundCake3" type="Sprite2D" parent="."]
+position = Vector2(91, 388)
+scale = Vector2(0.393957, 0.393957)
+texture = ExtResource("8_dxljs")
+
+[node name="GroundCake" type="Sprite2D" parent="GroundCake3"]
+position = Vector2(1137.64, 119.937)
+scale = Vector2(0.553577, 0.553577)
+texture = ExtResource("8_dxljs")
+
+[node name="GroundCakeSmall" type="Sprite2D" parent="GroundCake3"]
+position = Vector2(870.654, 32.9985)
+scale = Vector2(0.50767, 0.50767)
+texture = ExtResource("9_hy7iv")
+
+[node name="GroundCakeSmall" type="Sprite2D" parent="GroundCake3/GroundCakeSmall"]
+position = Vector2(-1350, -1315)
+scale = Vector2(1.29191, 1.29191)
+texture = ExtResource("9_hy7iv")
+
+[node name="GroundCake2" type="Sprite2D" parent="GroundCake3"]
+position = Vector2(439.135, 27.9218)
+scale = Vector2(1.59322, 1.59322)
+texture = ExtResource("8_dxljs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(70, 584)
+scale = Vector2(0.439999, 0.439999)
+sprite_frames = SubResource("SpriteFrames_uexbm")
+frame_progress = 0.417983
+
+[node name="GroundCake" type="Sprite2D" parent="AnimatedSprite2D"]
+position = Vector2(297.728, -693.184)
+rotation = -0.0057146
+scale = Vector2(0.838493, 0.674452)
+texture = ExtResource("8_dxljs")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(315, 303)
+scale = Vector2(0.199999, 0.199999)
+sprite_frames = SubResource("SpriteFrames_b2cp2")
+frame_progress = 0.493
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="AnimatedSprite2D2"]
+position = Vector2(3635.02, -200.001)
+scale = Vector2(0.71477, 0.71477)
+sprite_frames = SubResource("SpriteFrames_b2cp2")
+frame_progress = 0.493
+
+[node name="Cloud" type="Sprite2D" parent="."]
+position = Vector2(71, 454)
+scale = Vector2(0.199998, 0.199998)
+texture = ExtResource("14_tfmpa")
+
+[node name="Cloud" type="Sprite2D" parent="Cloud"]
+position = Vector2(2505.03, 155.002)
+scale = Vector2(0.810467, 0.810467)
+texture = ExtResource("14_tfmpa")
+
+[node name="Cloud" type="Sprite2D" parent="Cloud/Cloud"]
+position = Vector2(3254.4, -247.637)
+scale = Vector2(0.810467, 0.810467)
+texture = ExtResource("14_tfmpa")
+
+[node name="SpikeManStand" type="Sprite2D" parent="."]
+position = Vector2(641, 600)
+scale = Vector2(0.160005, 0.160005)
+texture = ExtResource("15_ssxa7")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_mj2m5")
+volume_db = -6.705
+autoplay = true
+script = ExtResource("16_vmyjr")
+
+[node name="coin_argent" type="AnimatedSprite2D" parent="."]
+position = Vector2(1044, 331)
+scale = Vector2(0.217425, 0.217425)
+sprite_frames = SubResource("SpriteFrames_61wga")
+frame_progress = 0.802979
+
+[node name="coin_bronze" type="AnimatedSprite2D" parent="."]
+position = Vector2(879.175, 541.768)
+scale = Vector2(0.217425, 0.217425)
+sprite_frames = SubResource("SpriteFrames_ielx3")
+frame = 1
+frame_progress = 0.578597
+
+[node name="coin_bronze4" type="AnimatedSprite2D" parent="coin_bronze"]
+position = Vector2(-998.846, -624.44)
+scale = Vector2(0.969176, 0.969176)
+sprite_frames = SubResource("SpriteFrames_ielx3")
+frame = 1
+frame_progress = 0.673338
+
+[node name="coin_bronze2" type="AnimatedSprite2D" parent="coin_bronze/coin_bronze4"]
+position = Vector2(-1067.76, -204.055)
+scale = Vector2(0.99974, 0.99974)
+sprite_frames = SubResource("SpriteFrames_ielx3")
+frame = 1
+frame_progress = 0.673338
+
+[node name="coin_bronze2" type="AnimatedSprite2D" parent="coin_bronze/coin_bronze4/coin_bronze2"]
+position = Vector2(2126.56, 403.477)
+scale = Vector2(0.999858, 0.999858)
+sprite_frames = SubResource("SpriteFrames_ielx3")
+frame = 1
+frame_progress = 0.673338
+
+[node name="coin_bronze3" type="AnimatedSprite2D" parent="coin_bronze"]
+position = Vector2(-3261.7, 28.6628)
+scale = Vector2(0.85266, 0.85266)
+sprite_frames = SubResource("SpriteFrames_ielx3")
+frame = 1
+frame_progress = 0.673338
+
+[node name="coin_bronze2" type="AnimatedSprite2D" parent="coin_bronze"]
+position = Vector2(-2548.81, -81.721)
+scale = Vector2(0.920912, 0.920912)
+sprite_frames = SubResource("SpriteFrames_ielx3")
+frame = 1
+frame_progress = 0.673338
+
+[node name="coin_bronze" type="AnimatedSprite2D" parent="coin_bronze"]
+position = Vector2(-1684.14, 281.623)
+scale = Vector2(0.925887, 0.925887)
+sprite_frames = SubResource("SpriteFrames_ielx3")
+frame = 1
+frame_progress = 0.578597
+
+[node name="coin_argent" type="AnimatedSprite2D" parent="coin_bronze/coin_bronze"]
+position = Vector2(-1728.67, -2458.88)
+scale = Vector2(1.09136, 1.09136)
+sprite_frames = SubResource("SpriteFrames_61wga")
+frame_progress = 0.802979
+
+[node name="GroundCake2" type="Sprite2D" parent="."]
+position = Vector2(409, 218)
+scale = Vector2(0.402161, 0.402161)
+texture = ExtResource("8_dxljs")
+
+[node name="GroundCake2" type="Sprite2D" parent="GroundCake2"]
+position = Vector2(499.8, -39.7851)
+scale = Vector2(0.915306, 0.915306)
+texture = ExtResource("8_dxljs")
+
+[node name="Cloud2" type="Sprite2D" parent="."]
+position = Vector2(61.9925, 167.75)
+scale = Vector2(0.242537, 0.242537)
+texture = ExtResource("14_tfmpa")
+
+[node name="Cloud2" type="Sprite2D" parent="Cloud2"]
+position = Vector2(3022.25, 413.339)
+scale = Vector2(0.784788, 0.784788)
+texture = ExtResource("14_tfmpa")

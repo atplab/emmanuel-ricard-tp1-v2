@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bn52dnwrrmi0t"]
+[gd_scene load_steps=6 format=3 uid="uid://bn52dnwrrmi0t"]
 
 [ext_resource type="AudioStream" uid="uid://hhc2gs03smsh" path="res://audio/upbeat-background-loop-casual-video-game-music-249200.mp3" id="1_f1804"]
 [ext_resource type="Script" uid="uid://tccu6jqnl351" path="res://audio_stream_player_2d.gd" id="2_nlbx0"]
 [ext_resource type="AudioStream" uid="uid://c43t1safcjxw6" path="res://audio/sons/handleCoins2.ogg" id="3_j4ca1"]
 [ext_resource type="Script" uid="uid://ywnlo7bptg4y" path="res://son1.gd" id="4_jqcyi"]
+[ext_resource type="Texture2D" uid="uid://bd0o50yy87mjk" path="res://img/kenney_animal-pack-redux/bear.png" id="5_jqcyi"]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
 stream = ExtResource("1_f1804")
@@ -22,5 +23,9 @@ offset_top = 169.0
 offset_right = 427.0
 offset_bottom = 273.0
 text = "Bouton"
+
+[node name="Bear2" type="Sprite2D" parent="son1"]
+position = Vector2(789, 364)
+texture = ExtResource("5_jqcyi")
 
 [connection signal="button_down" from="son1/Button" to="son1" method="_on_button_button_down"]
