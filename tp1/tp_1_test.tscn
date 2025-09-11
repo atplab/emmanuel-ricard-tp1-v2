@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://big0x65e1yu0i"]
+[gd_scene load_steps=45 format=3 uid="uid://big0x65e1yu0i"]
 
 [ext_resource type="Script" uid="uid://cuxrksc0kou30" path="res://tp_1_test.gd" id="1_3v75x"]
 [ext_resource type="Texture2D" uid="uid://dx7indmqfudrf" path="res://img/jumper/Background/bg_layer1.png" id="2_h5nue"]
@@ -36,6 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://cqjlxyii1nfvq" path="res://img/jumper/Items/silver_2.png" id="24_gqg8h"]
 [ext_resource type="Texture2D" uid="uid://dngcp1b2w2eq7" path="res://img/jumper/Enemies/spikeMan_walk2.png" id="24_msqmt"]
 [ext_resource type="Texture2D" uid="uid://6n1r6kd0s40r" path="res://img/jumper/Items/silver_3.png" id="25_msqmt"]
+[ext_resource type="AudioStream" uid="uid://bris45tftn3ho" path="res://audio/sons/footstep00.ogg" id="31_26mbx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mj2m5"]
 animations = [{
@@ -511,6 +512,9 @@ stream = ExtResource("15_mj2m5")
 volume_db = -6.705
 autoplay = true
 script = ExtResource("16_vmyjr")
+
+[node name="audio_marcher" type="AudioStreamPlayer2D" parent="AudioStreamPlayer2D"]
+stream = ExtResource("31_26mbx")
 
 [node name="coin_argent" type="AnimatedSprite2D" parent="."]
 position = Vector2(1044, 331)
