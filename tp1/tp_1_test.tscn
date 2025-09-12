@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://big0x65e1yu0i"]
+[gd_scene load_steps=44 format=3 uid="uid://big0x65e1yu0i"]
 
 [ext_resource type="Script" uid="uid://cuxrksc0kou30" path="res://tp_1_test.gd" id="1_3v75x"]
 [ext_resource type="Texture2D" uid="uid://dx7indmqfudrf" path="res://img/jumper/Background/bg_layer1.png" id="2_h5nue"]
@@ -23,7 +23,6 @@
 [ext_resource type="Texture2D" uid="uid://bswffa6k3qsp5" path="res://img/plateformer/character_reverse/platformChar_idle.png" id="16_61wga"]
 [ext_resource type="Texture2D" uid="uid://cjf8v7js3wveq" path="res://img/plateformer/Characters/platformChar_walk2.png" id="16_b2cp2"]
 [ext_resource type="Texture2D" uid="uid://c17njfagmmqyf" path="res://img/jumper/Enemies/flyMan_fly.png" id="16_v4jhf"]
-[ext_resource type="Script" uid="uid://tccu6jqnl351" path="res://audio_stream_player_2d.gd" id="16_vmyjr"]
 [ext_resource type="Texture2D" uid="uid://cslt8wewq1ycy" path="res://img/plateformer/character_reverse/platformChar_happy.png" id="17_26mbx"]
 [ext_resource type="Texture2D" uid="uid://6yqv1jo6owxf" path="res://img/jumper/Enemies/flyMan_jump.png" id="17_pb6st"]
 [ext_resource type="Texture2D" uid="uid://c8qctik1cbxrw" path="res://img/jumper/Items/bronze_1.png" id="20_v4jhf"]
@@ -512,8 +511,6 @@ animation = &"Red_Idle"
 scale = Vector2(1, 0.998909)
 stream = ExtResource("15_mj2m5")
 volume_db = -6.705
-autoplay = true
-script = ExtResource("16_vmyjr")
 
 [node name="audio_marcher" type="AudioStreamPlayer2D" parent="Background"]
 position = Vector2(1041, 2)

@@ -43,4 +43,4 @@ func _process(delta: float) -> void:
 		$spring/spring2.play("default")
 
 func _on_button_pressed() -> void:
-	$Background.play
+	$Background.play()
