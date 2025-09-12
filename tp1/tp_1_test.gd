@@ -6,6 +6,7 @@ func _input(event: InputEvent) -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("ui_right"):
 		$playerwalking.play("walk")
+		$AudioStreamPlayer2D/audio_marcher.play()
 	else:
 		if Input.is_action_pressed("ui_left"):
 			$playerwalking.play("walk_left")
@@ -41,5 +42,5 @@ func _process(delta: float) -> void:
 		$spring/spring.play("default")
 		$spring/spring2.play("default")
 
-
-# Exemple : touche -> son + animation
+func _on_button_pressed() -> void:
+	$AudioStreamPlayer2D/audio_marcher.play()

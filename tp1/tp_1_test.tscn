@@ -514,7 +514,13 @@ autoplay = true
 script = ExtResource("16_vmyjr")
 
 [node name="audio_marcher" type="AudioStreamPlayer2D" parent="AudioStreamPlayer2D"]
+position = Vector2(1041, 2)
 stream = ExtResource("31_26mbx")
+
+[node name="Button" type="Button" parent="AudioStreamPlayer2D/audio_marcher"]
+offset_right = 105.0
+offset_bottom = 48.0
+text = "Walk"
 
 [node name="coin_argent" type="AnimatedSprite2D" parent="."]
 position = Vector2(1044, 331)
@@ -594,3 +600,5 @@ texture = ExtResource("14_tfmpa")
 position = Vector2(3022.25, 413.339)
 scale = Vector2(0.784788, 0.784788)
 texture = ExtResource("14_tfmpa")
+
+[connection signal="pressed" from="AudioStreamPlayer2D/audio_marcher/Button" to="." method="_on_button_pressed"]
