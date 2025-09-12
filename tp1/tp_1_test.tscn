@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://c1yemxvnhkjkf" path="res://img/jumper/Enemies/cloud.png" id="14_tfmpa"]
 [ext_resource type="Texture2D" uid="uid://b54u4ukyawtjt" path="res://img/plateformer/Characters/platformChar_happy.png" id="15_b2cp2"]
 [ext_resource type="Texture2D" uid="uid://dqa8rs25y0rnj" path="res://img/jumper/Enemies/flyMan_stand.png" id="15_kogf3"]
-[ext_resource type="AudioStream" uid="uid://hhc2gs03smsh" path="res://audio/upbeat-background-loop-casual-video-game-music-249200.mp3" id="15_mj2m5"]
+[ext_resource type="AudioStream" uid="uid://hhc2gs03smsh" path="res://audio/sons/upbeat-background-loop-casual-video-game-music-249200.mp3" id="15_mj2m5"]
 [ext_resource type="Texture2D" uid="uid://bcylcb0tkv6nq" path="res://img/plateformer/Characters/platformChar_walk1.png" id="15_pb6st"]
 [ext_resource type="Texture2D" uid="uid://7msag1wrk0m1" path="res://img/jumper/Enemies/spikeMan_stand.png" id="15_ssxa7"]
 [ext_resource type="Texture2D" uid="uid://bswffa6k3qsp5" path="res://img/plateformer/character_reverse/platformChar_idle.png" id="16_61wga"]
