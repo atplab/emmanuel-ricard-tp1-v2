@@ -10,6 +10,7 @@ func _process(delta: float) -> void:
 	else:
 		if Input.is_action_pressed("ui_left"):
 			$playerwalking.play("walk_left")
+			$Background/audio_marcher.play()
 		else:
 			$playerwalking.play("idle")
 			
@@ -18,6 +19,7 @@ func _process(delta: float) -> void:
 		
 	if Input.is_action_pressed("ui_up"):
 		$playerjump.play("playerjump")
+		$Background/Saut_son.play()
 	else:
 		$playerjump.play("idle_jump")
 		
@@ -27,6 +29,8 @@ func _process(delta: float) -> void:
 		$"red ennemy".play("Red_Idle")
 		
 	if Input.is_action_pressed("ui_page_up"):
+		$"red ennemy".play("Red_Idle")
+	else:
 		$"Flying bee".play("Bee_flying")
 		$"Flying bee/Flying_bee".play("Bee_flying")
 		$coin_bronze.play("default")

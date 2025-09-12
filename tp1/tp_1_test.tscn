@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://big0x65e1yu0i"]
+[gd_scene load_steps=45 format=3 uid="uid://big0x65e1yu0i"]
 
 [ext_resource type="Script" uid="uid://cuxrksc0kou30" path="res://tp_1_test.gd" id="1_3v75x"]
 [ext_resource type="Texture2D" uid="uid://dx7indmqfudrf" path="res://img/jumper/Background/bg_layer1.png" id="2_h5nue"]
@@ -35,7 +35,8 @@
 [ext_resource type="Texture2D" uid="uid://cqjlxyii1nfvq" path="res://img/jumper/Items/silver_2.png" id="24_gqg8h"]
 [ext_resource type="Texture2D" uid="uid://dngcp1b2w2eq7" path="res://img/jumper/Enemies/spikeMan_walk2.png" id="24_msqmt"]
 [ext_resource type="Texture2D" uid="uid://6n1r6kd0s40r" path="res://img/jumper/Items/silver_3.png" id="25_msqmt"]
-[ext_resource type="AudioStream" uid="uid://bris45tftn3ho" path="res://audio/sons/footstep00.ogg" id="31_26mbx"]
+[ext_resource type="AudioStream" uid="uid://xe2671vlg577" path="res://audio/sons/footstep02.ogg" id="30_26mbx"]
+[ext_resource type="AudioStream" uid="uid://dtsptag1ou3q" path="res://audio/sons/jump.mp3" id="31_yjqig"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mj2m5"]
 animations = [{
@@ -507,20 +508,30 @@ scale = Vector2(0.160005, 0.160005)
 sprite_frames = SubResource("SpriteFrames_26mbx")
 animation = &"Red_Idle"
 
+[node name="Button" type="Button" parent="."]
+offset_left = 1217.43
+offset_top = 13.0583
+offset_right = 1495.43
+offset_bottom = 159.058
+scale = Vector2(1.87293, 1.87293)
+text = "Touches :
+flèche haut : tout déclencher
+flèche bas : l'ennemi rouge marche
+Espace : saut
+D : avancer
+A : reculer
+"
+
 [node name="Background" type="AudioStreamPlayer2D" parent="."]
 scale = Vector2(1, 0.998909)
 stream = ExtResource("15_mj2m5")
 volume_db = -6.705
 
-[node name="audio_marcher" type="AudioStreamPlayer2D" parent="Background"]
-position = Vector2(1041, 2)
-stream = ExtResource("31_26mbx")
+[node name="Saut_son" type="AudioStreamPlayer2D" parent="Background"]
+stream = ExtResource("31_yjqig")
 
-[node name="Button" type="Button" parent="Background/audio_marcher"]
-offset_right = 105.0
-offset_bottom = 48.0
-text = "Start music"
-metadata/_edit_use_anchors_ = true
+[node name="audio_marcher" type="AudioStreamPlayer2D" parent="Background"]
+stream = ExtResource("30_26mbx")
 
 [node name="coin_argent" type="AnimatedSprite2D" parent="."]
 position = Vector2(1044, 331)
@@ -600,5 +611,3 @@ texture = ExtResource("14_tfmpa")
 position = Vector2(3022.25, 413.339)
 scale = Vector2(0.784788, 0.784788)
 texture = ExtResource("14_tfmpa")
-
-[connection signal="pressed" from="Background/audio_marcher/Button" to="." method="_on_button_pressed"]
