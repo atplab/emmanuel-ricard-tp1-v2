@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://big0x65e1yu0i"]
+[gd_scene load_steps=46 format=3 uid="uid://big0x65e1yu0i"]
 
 [ext_resource type="Script" uid="uid://cuxrksc0kou30" path="res://tp_1_test.gd" id="1_3v75x"]
 [ext_resource type="Texture2D" uid="uid://dx7indmqfudrf" path="res://img/jumper/Background/bg_layer1.png" id="2_h5nue"]
@@ -37,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://6n1r6kd0s40r" path="res://img/jumper/Items/silver_3.png" id="25_msqmt"]
 [ext_resource type="AudioStream" uid="uid://xe2671vlg577" path="res://audio/sons/footstep02.ogg" id="30_26mbx"]
 [ext_resource type="AudioStream" uid="uid://dtsptag1ou3q" path="res://audio/sons/jump.mp3" id="31_yjqig"]
+[ext_resource type="AudioStream" uid="uid://d2ww0fiwp4wpq" path="res://audio/sons/footstep01.ogg" id="32_yjqig"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mj2m5"]
 animations = [{
@@ -515,7 +516,6 @@ offset_right = 1495.43
 offset_bottom = 159.058
 scale = Vector2(1.87293, 1.87293)
 text = "Touches :
-flèche haut : tout déclencher
 flèche bas : l'ennemi rouge marche
 Espace : saut
 D : avancer
@@ -532,6 +532,16 @@ stream = ExtResource("31_yjqig")
 
 [node name="audio_marcher" type="AudioStreamPlayer2D" parent="Background"]
 stream = ExtResource("30_26mbx")
+
+[node name="ennemi_walk" type="AudioStreamPlayer2D" parent="Background"]
+stream = ExtResource("32_yjqig")
+
+[node name="Button" type="Button" parent="Background"]
+offset_left = 1060.73
+offset_top = 13.0725
+offset_right = 1136.73
+offset_bottom = 51.0725
+text = "music"
 
 [node name="coin_argent" type="AnimatedSprite2D" parent="."]
 position = Vector2(1044, 331)
@@ -611,3 +621,5 @@ texture = ExtResource("14_tfmpa")
 position = Vector2(3022.25, 413.339)
 scale = Vector2(0.784788, 0.784788)
 texture = ExtResource("14_tfmpa")
+
+[connection signal="pressed" from="Background/Button" to="." method="_on_button_pressed"]

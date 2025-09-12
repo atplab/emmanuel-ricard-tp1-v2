@@ -25,6 +25,7 @@ func _process(delta: float) -> void:
 		
 	if Input.is_action_pressed("ui_page_down"):
 		$"red ennemy".play("Red_walk")
+		$Background/ennemi_walk.play()
 	else:
 		$"red ennemy".play("Red_Idle")
 		
@@ -48,4 +49,4 @@ func _process(delta: float) -> void:
 
 func _on_button_pressed() -> void:
 	$Background.play()
-	$Background/audio_marcher/Button.visible = false
+	$Background/Button.visible = false
