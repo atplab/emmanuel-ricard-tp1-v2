@@ -27,6 +27,7 @@ func _process(delta: float) -> void:
 		$"red ennemy".play("Red_Idle")
 		
 	if Input.is_action_pressed("ui_page_up"):
+		$AudioStreamPlayer2D.play()
 		$"Flying bee".play("Bee_flying")
 		$"Flying bee/Flying_bee".play("Bee_flying")
 		$coin_bronze.play("default")
