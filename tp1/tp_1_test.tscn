@@ -246,6 +246,7 @@ animations = [{
 }]
 
 [node name="TP1 test" type="Node2D"]
+scale = Vector2(1.77603, 1.77603)
 script = ExtResource("1_3v75x")
 
 [node name="BgLayer1" type="Sprite2D" parent="."]
@@ -521,6 +522,7 @@ stream = ExtResource("31_26mbx")
 offset_right = 105.0
 offset_bottom = 48.0
 text = "Walk"
+metadata/_edit_use_anchors_ = true
 
 [node name="coin_argent" type="AnimatedSprite2D" parent="."]
 position = Vector2(1044, 331)
