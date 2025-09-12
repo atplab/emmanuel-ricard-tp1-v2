@@ -246,7 +246,7 @@ animations = [{
 }]
 
 [node name="TP1 test" type="Node2D"]
-scale = Vector2(1.77603, 1.77603)
+scale = Vector2(0.995538, 0.995538)
 script = ExtResource("1_3v75x")
 
 [node name="BgLayer1" type="Sprite2D" parent="."]
@@ -508,20 +508,21 @@ scale = Vector2(0.160005, 0.160005)
 sprite_frames = SubResource("SpriteFrames_26mbx")
 animation = &"Red_Idle"
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="Background" type="AudioStreamPlayer2D" parent="."]
+scale = Vector2(1, 0.998909)
 stream = ExtResource("15_mj2m5")
 volume_db = -6.705
 autoplay = true
 script = ExtResource("16_vmyjr")
 
-[node name="audio_marcher" type="AudioStreamPlayer2D" parent="AudioStreamPlayer2D"]
+[node name="audio_marcher" type="AudioStreamPlayer2D" parent="Background"]
 position = Vector2(1041, 2)
 stream = ExtResource("31_26mbx")
 
-[node name="Button" type="Button" parent="AudioStreamPlayer2D/audio_marcher"]
+[node name="Button" type="Button" parent="Background/audio_marcher"]
 offset_right = 105.0
 offset_bottom = 48.0
-text = "Walk"
+text = "Start music"
 metadata/_edit_use_anchors_ = true
 
 [node name="coin_argent" type="AnimatedSprite2D" parent="."]
@@ -603,4 +604,4 @@ position = Vector2(3022.25, 413.339)
 scale = Vector2(0.784788, 0.784788)
 texture = ExtResource("14_tfmpa")
 
-[connection signal="pressed" from="AudioStreamPlayer2D/audio_marcher/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Background/audio_marcher/Button" to="." method="_on_button_pressed"]

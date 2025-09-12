@@ -6,7 +6,7 @@ func _input(event: InputEvent) -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("ui_right"):
 		$playerwalking.play("walk")
-		$AudioStreamPlayer2D/audio_marcher.play()
+		$Background/audio_marcher.play()
 	else:
 		if Input.is_action_pressed("ui_left"):
 			$playerwalking.play("walk_left")
@@ -27,7 +27,6 @@ func _process(delta: float) -> void:
 		$"red ennemy".play("Red_Idle")
 		
 	if Input.is_action_pressed("ui_page_up"):
-		$AudioStreamPlayer2D.play()
 		$"Flying bee".play("Bee_flying")
 		$"Flying bee/Flying_bee".play("Bee_flying")
 		$coin_bronze.play("default")
@@ -44,4 +43,4 @@ func _process(delta: float) -> void:
 		$spring/spring2.play("default")
 
 func _on_button_pressed() -> void:
-	$AudioStreamPlayer2D/audio_marcher.play()
+	$Background.play
